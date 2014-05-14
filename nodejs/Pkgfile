@@ -1,0 +1,17 @@
+# Description: Evented I/O for V8 JavaScript
+# URL: http://nodejs.org/
+# Packager: stayradiated
+
+name=nodejs
+version=0.10.28
+release=1
+source=(http://nodejs.org/dist/v$version/node-v$version.tar.gz)
+
+build() {
+  cd node-v$version
+  ./configure --prefix=/usr
+  make
+  make DESTDIR=$PKG install
+  mv $PKG/usr/share/man $PKG/usr
+  rmdir $PKG/usr/share
+}
