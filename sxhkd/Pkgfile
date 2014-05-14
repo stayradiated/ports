@@ -1,0 +1,20 @@
+# Description: Simple X hotkey daemon
+# URL: https://github.com/baskerville/sxhkd
+# Maintainer: stayradiated
+# Depends on: xorg-libxcb
+
+name=sxhkd
+version=0.5.3
+release=1
+source=(https://github.com/baskerville/$name/archive/$version.tar.gz)
+
+build () {
+  cd "$name-$version"
+
+  make
+  make \
+    DESTDIR=$PKG \
+    PREFIX=/usr \
+    MANPREFIX=/usr/man \
+    install
+}

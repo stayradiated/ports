@@ -1,0 +1,27 @@
+# Description: Outputs X windows titles
+# URL: https://github.com/baskerville/xtitle
+# Maintainer: stayradiated
+# Depends on:
+
+name=xtitle
+version=git
+release=1
+source=()
+
+build () {
+  cd $PKGMK_SOURCE_DIR
+
+  if cd $name; then
+    git pull git://github.com/baskerville/xtitle.git
+  else
+    git clone git://github.com/baskerville/xtitle.git $name
+    cd $name
+  fi
+
+  make
+  make \
+    DESTDIR=$PKG \
+    PREFIX=/usr \
+    MANPREFIX=/usr/man \
+    install
+}

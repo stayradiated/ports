@@ -1,0 +1,15 @@
+drwxr-xr-x	stayrad/admin	usr/
+drwxr-xr-x	stayrad/admin	usr/bin/
+-rwxr-xr-x	stayrad/admin	usr/bin/bspc
+-rwxr-xr-x	stayrad/admin	usr/bin/bspwm
+drwxr-xr-x	stayrad/admin	usr/man/
+drwxr-xr-x	stayrad/admin	usr/man/man1/
+lrwxrwxrwx	stayrad/admin	usr/man/man1/bspc.1.gz -> bspwm.1.gz
+-rw-rw-r--	stayrad/admin	usr/man/man1/bspwm.1.gz
+drwxr-xr-x	stayrad/admin	usr/share/
+drwxr-xr-x	stayrad/admin	usr/share/bash-completion/
+drwxr-xr-x	stayrad/admin	usr/share/bash-completion/completions/
+-rw-rw-r--	stayrad/admin	usr/share/bash-completion/completions/bspc
+drwxr-xr-x	stayrad/admin	usr/share/zsh/
+drwxr-xr-x	stayrad/admin	usr/share/zsh/site-functions/
+-rw-rw-r--	stayrad/admin	usr/share/zsh/site-functions/_bspc

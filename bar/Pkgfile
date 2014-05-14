@@ -1,0 +1,27 @@
+# Description: bar ain't recursive - a lightweight xcb based bar
+# URL: https://github.com/LemonBoy/bar
+# Maintainer: stayradiated
+# Depends on: xorg-libxcb
+
+name=bar
+version=git
+release=1
+source=()
+
+build () {
+  cd $PKGMK_SOURCE_DIR
+
+  if cd $name; then
+    git pull git://github.com/LemonBoy/bar.git
+  else
+    git clone git://github.com/LemonBoy/bar.git $name
+    cd $name
+  fi
+
+  make
+  make \
+    DESTDIR=$PKG \
+    PREFIX=/usr \
+    MANPREFIX=/usr/man \
+    install
+}

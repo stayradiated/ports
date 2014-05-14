@@ -1,0 +1,9 @@
+drwxr-xr-x	stayrad/users	usr/
+drwxr-xr-x	stayrad/users	usr/bin/
+-rwxr-xr-x	stayrad/users	usr/bin/dmenu
+-rwxr-xr-x	stayrad/users	usr/bin/dmenu_run
+-rwxr-xr-x	stayrad/users	usr/bin/stest
+drwxr-xr-x	stayrad/users	usr/man/
+drwxr-xr-x	stayrad/users	usr/man/man1/
+-rw-r--r--	stayrad/users	usr/man/man1/dmenu.1.gz
+-rw-r--r--	stayrad/users	usr/man/man1/stest.1.gz

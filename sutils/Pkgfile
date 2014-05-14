@@ -1,0 +1,27 @@
+# Description: Small command line utilities
+# URL: https://github.com/baskerville/sutils
+# Maintainer: stayradiated
+# Depends on:
+
+name=sutils
+version=git
+release=1
+source=()
+
+build () {
+  cd $PKGMK_SOURCE_DIR
+
+  if cd $name; then
+    git pull git://github.com/baskerville/sutils.git
+  else
+    git clone git://github.com/baskerville/sutils.git $name
+    cd $name
+  fi
+
+  make
+  make \
+    DESTDIR=$PKG \
+    PREFIX=/usr \
+    MANPREFIX=/usr/man \
+    install
+}

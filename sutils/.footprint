@@ -1,0 +1,8 @@
+drwxr-xr-x	stayrad/admin	usr/
+drwxr-xr-x	stayrad/admin	usr/bin/
+-rwxr-xr-x	stayrad/admin	usr/bin/battery
+-rwxr-xr-x	stayrad/admin	usr/bin/clock
+-rwxr-xr-x	stayrad/admin	usr/bin/essid
+-rwxr-xr-x	stayrad/admin	usr/bin/exist
+-rwxr-xr-x	stayrad/admin	usr/bin/narg
+-rwxr-xr-x	stayrad/admin	usr/bin/uq
