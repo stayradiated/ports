@@ -1,0 +1,17 @@
+# Description: Open Source Continuous Replication / Cluster Synchronization Thing
+# URL: https://github.com/calmh/syncthing
+# Maintainer: stayradiated
+# Depends on:
+
+name=syncthing
+version=0.8.5
+release=1
+source=(
+  https://github.com/calmh/syncthing/releases/download/v${version}/syncthing-linux-amd64-v${version}.tar.gz
+)
+
+build () {
+  cd syncthing-linux-amd64-v${version}
+  mkdir -p ${PKG}/usr/bin
+  cp syncthing ${PKG}/usr/bin
+}
