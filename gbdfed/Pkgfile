@@ -1,0 +1,25 @@
+# Description: A GTK2 bitmap font editor
+# URL: http://www.math.nmsu.edu/~mleisher/Software/gbdfed/
+# Maintainer: stayradiated
+# Depends on: gtk
+
+name=gbdfed
+version=1.6
+release=1
+source=(
+  http://www.math.nmsu.edu/~mleisher/Software/gbdfed/$name-$version.tbz2
+  num_signals.patch
+)
+
+build() {
+  cd $name-$version
+
+  sed -i 's/-D.*_DEPRECATED\s*\\*//' Makefile.in
+  patch -p1 < ../num_signals.patch
+  ./configure --prefix=/usr
+
+  make
+  make DESTDIR=$PKG install
+}
+
+# vim: set ft=sh ts=4 et:

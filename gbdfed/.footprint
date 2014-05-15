@@ -1,0 +1,7 @@
+drwxr-xr-x	stayrad/admin	usr/
+drwxr-xr-x	stayrad/admin	usr/bin/
+-rwxr-xr-x	stayrad/admin	usr/bin/gbdfed
+drwxr-xr-x	stayrad/admin	usr/share/
+drwxr-xr-x	stayrad/admin	usr/share/man/
+drwxr-xr-x	stayrad/admin	usr/share/man/man1/
+-rw-r--r--	stayrad/admin	usr/share/man/man1/gbdfed.1.gz

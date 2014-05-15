@@ -1,4 +1,6 @@
 *.tar.gz
+*.tbz2
+
 /bar/bar
 /sutils/sutils
 /xtitle/xtitle
