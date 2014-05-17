@@ -1,0 +1,26 @@
+# Description: A code-searching tool similar to ack, but faster.
+# URL: https://github.com/ggreer/the_silver_searcher
+# Maintainer: stayradiated
+# Depends on: pkg-config automake gcc libpcre zlib
+
+name=the_silver_searcher
+version=git
+release=1
+source=()
+
+build () {
+  cd $PKGMK_SOURCE_DIR
+
+  if cd $name; then
+    git pull git://github.com/ggreer/the_silver_searcher.git
+  else
+    git clone git://github.com/ggreer/the_silver_searcher.git $name
+    cd $name
+  fi
+
+  ./build.sh
+  make \
+    DESTDIR=$PKG \
+    PREFIX=/usr \
+    install
+}

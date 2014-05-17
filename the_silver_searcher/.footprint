@@ -1,0 +1,11 @@
+drwxr-xr-x	stayrad/admin	usr/
+drwxr-xr-x	stayrad/admin	usr/local/
+drwxr-xr-x	stayrad/admin	usr/local/bin/
+-rwxr-xr-x	stayrad/admin	usr/local/bin/ag
+drwxr-xr-x	stayrad/admin	usr/local/share/
+drwxr-xr-x	stayrad/admin	usr/local/share/man/
+drwxr-xr-x	stayrad/admin	usr/local/share/man/man1/
+-rw-r--r--	stayrad/admin	usr/local/share/man/man1/ag.1.gz
+drwxr-xr-x	stayrad/admin	usr/local/share/the_silver_searcher/
+drwxr-xr-x	stayrad/admin	usr/local/share/the_silver_searcher/completions/
+-rw-r--r--	stayrad/admin	usr/local/share/the_silver_searcher/completions/ag.bashcomp.sh
