@@ -1,0 +1,17 @@
+# Description: hub helps you win at git
+# URL: https://github.com/github/hub
+# Maintainer: stayradiated
+# Depends on: git ruby
+
+name=hub
+version=1.12.0
+release=1
+source=(
+  https://github.com/github/$name/archive/v$version.tar.gz
+)
+
+build () {
+  cd $name-$version
+  rake install prefix=$PKG/usr/local/
+  install -m 0644 -D etc/hub.zsh_completion $PKG/usr/share/zsh/site-functions/_hub
+}
