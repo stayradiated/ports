@@ -1,0 +1,25 @@
+# Description: An attempt at creating a safer, faster, and more stable browser
+# URL: https://www.google.com/chrome
+# Maintainer: stayradiated
+# Depends On: gconf cups libgcrypt
+
+name=google-chrome
+version=34.0.1847.137
+release=1
+source=(
+  https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+)
+
+build () {
+  ls
+  bsdtar -xf google-chrome-stable_current_amd64.deb
+  bsdtar -xf data.tar.lzma -C $PKG
+
+  # Man page
+  gzip $PKG/usr/share/man/man1/google-chrome.1
+
+  # License
+  install -d $PKG/usr/share/licenses/google-chrome/
+  curl -Ls https://www.google.com/intl/en/chrome/browser/privacy/eula_text.html \
+    -o $PKG/usr/share/licenses/google-chrome/eula_text.html
+}
