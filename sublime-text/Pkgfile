@@ -1,0 +1,19 @@
+# Description: text editor
+# URL: http://sublimetext.com/3dev
+# Maintainer: stayradiated
+# Depends on: libpng gtk
+
+name=sublime-text
+version=3.3059
+release=1
+source=(
+  http://c758482.r82.cf2.rackcdn.com/sublime_text_3_build_${version:2}_x64.tar.bz2
+)
+
+build () {
+  install -dm755 $PKG/opt
+  cp --preserve=mode -r  sublime_text_3 $PKG/opt/sublime_text_3
+
+  install -dm755 $PKG/usr/bin
+  ln -s /opt/sublime_text_3/sublime_text $PKG/usr/bin/subl3
+}
