@@ -5,17 +5,18 @@
 
 name=sutils
 version=git
+repo=$name-git
 release=1
 source=()
 
 build () {
   cd $PKGMK_SOURCE_DIR
 
-  if cd $name; then
+  if cd $repo; then
     git pull git://github.com/baskerville/sutils.git
   else
-    git clone git://github.com/baskerville/sutils.git $name
-    cd $name
+    git clone git://github.com/baskerville/sutils.git $repo
+    cd $repo
   fi
 
   make
