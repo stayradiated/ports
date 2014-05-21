@@ -1,0 +1,4 @@
+drwxr-xr-x	stayrad/admin	usr/
+drwxr-xr-x	stayrad/admin	usr/lib/
+lrwxrwxrwx	stayrad/admin	usr/lib/libgcrypt.so.11 -> libgcrypt.so.11.8.2
+-rwxr-xr-x	stayrad/admin	usr/lib/libgcrypt.so.11.8.1

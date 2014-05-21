@@ -1,0 +1,20 @@
+# Description: General purpose cryptographic library based on the code from GnuPG
+# URL: http://www.gnupg.org
+# Maintainer: stayradiated
+# Depends on: libgpg-error
+
+name=libgcrypt15
+version=1.5.3
+release=1
+source=(
+  ftp://ftp.gnupg.org/gcrypt/libgcrypt/libgcrypt-$version.tar.bz2
+)
+
+build () {
+  cd libgcrypt-$version
+  ./configure --prefix=$PKG/usr --disable-static --disable-padlock-support
+  make
+  install -Dm755 src/.libs/libgcrypt.so.11.8.2 $PKG/usr/lib/libgcrypt.so.11.8.1
+  cd $PKG/usr/lib
+  ln -s libgcrypt.so.11.8.2 libgcrypt.so.11
+}
