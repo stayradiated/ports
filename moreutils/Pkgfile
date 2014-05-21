@@ -1,0 +1,31 @@
+# Description: a collection of tools that nobody thought to write long ago when unix was young.
+# URL: https://joeyh.name/code/moreutils/ 
+# Maintainer: stayradiated
+# Depends on: docbook-xsl
+
+name=moreutils
+version=git
+repo=$name-git
+git=git://git.kitenet.net/moreutils
+release=1
+source=()
+
+build () {
+  cd $PKGMK_SOURCE_DIR
+
+  if cd $repo; then
+    git pull $git
+  else
+    git clone $git $repo
+    cd $repo
+  fi
+
+  make \
+    DOCBOOK2XMAN=xsltproc\ --param\ man.authors.section.enabled\ 0\ /usr/share/xml/docbook/xsl-stylesheets-1.78.1/manpages/docbook.xsl
+
+  make \
+    DESTDIR=$PKG \
+    PREFIX=/usr \
+    MANPREFIX=/usr/man \
+    install
+}
