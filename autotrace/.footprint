@@ -1,0 +1,25 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/autotrace
+-rwxr-xr-x	root/root	usr/bin/autotrace-config
+drwxr-xr-x	root/root	usr/include/
+drwxr-xr-x	root/root	usr/include/autotrace/
+-rw-r--r--	root/root	usr/include/autotrace/autotrace.h
+-rw-r--r--	root/root	usr/include/autotrace/exception.h
+-rw-r--r--	root/root	usr/include/autotrace/input.h
+-rw-r--r--	root/root	usr/include/autotrace/output.h
+-rw-r--r--	root/root	usr/include/autotrace/types.h
+drwxr-xr-x	root/root	usr/lib/
+-rw-r--r--	root/root	usr/lib/libautotrace.a
+-rwxr-xr-x	root/root	usr/lib/libautotrace.la
+lrwxrwxrwx	root/root	usr/lib/libautotrace.so -> libautotrace.so.3.0.0
+lrwxrwxrwx	root/root	usr/lib/libautotrace.so.3 -> libautotrace.so.3.0.0
+-rwxr-xr-x	root/root	usr/lib/libautotrace.so.3.0.0
+drwxr-xr-x	root/root	usr/lib/pkgconfig/
+-rw-r--r--	root/root	usr/lib/pkgconfig/autotrace.pc
+drwxr-xr-x	root/root	usr/man/
+drwxr-xr-x	root/root	usr/man/man1/
+-rw-r--r--	root/root	usr/man/man1/autotrace.1.gz
+drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/aclocal/
+-rw-r--r--	root/root	usr/share/aclocal/autotrace.m4
