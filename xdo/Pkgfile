@@ -1,0 +1,20 @@
+# Description: Binary space partitioning window manager
+# URL: https://github.com/baskerville/bspwm
+# Maintainer: stayradiated
+# Depends on: xorg-libxcb
+
+name=xdo
+version=0.3
+release=1
+source=(https://github.com/baskerville/$name/archive/$version.tar.gz)
+
+build () {
+  cd "$name-$version"
+
+  make
+  make \
+    DESTDIR=$PKG \
+    PREFIX=/usr \
+    MANPREFIX=/usr/man \
+    install
+}
