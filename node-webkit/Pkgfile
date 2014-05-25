@@ -1,0 +1,16 @@
+# Description: Call all Node.js modules directly from DOM and enable a new way of writing applications with all Web technologies.
+# URL: https://github.com/rogerwang/node-webkit
+# Maintainer: stayradiated
+
+name=node-webkit
+version=0.9.2
+release=1
+source=(
+  http://dl.node-webkit.org/v$version/$name-v$version-linux-x64.tar.gz
+)
+
+build () {
+  cd $name-v$version-linux-x64
+  install -dm755 $PKG/usr/bin
+  cp nw nw.pak $PKG/usr/bin
+}
