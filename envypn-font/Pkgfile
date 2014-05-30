@@ -1,0 +1,25 @@
+# Description: Readable bitmap font inspired by Envy Code R
+# URL: https://github.com/Ypnose
+# Maintainer: stayradiated
+# Depends on: xorg-mkfontdir xorg-mkfontscale fontconfig
+
+name=envypn-font
+version=1.6
+release=1
+source=(
+  http://files.ypnose.org/p/envypn-font/$name-$version.tar.gz
+)
+
+build() {
+    cd $name-$version
+
+    install -d $PKG/usr/share/fonts/envypn
+    install -m644 *.pcf $PKG/usr/share/fonts/envypn
+    install -m644 fonts.alias $PKG/usr/share/fonts/envypn/fonts.alias
+    install -Dm644 LICENSE $PKG/usr/share/licenses/envypn/LICENSE
+    install -Dm644 README $PKG/usr/share/doc/envypn/README
+    
+    cd $PKG/usr/share/fonts/envypn
+    mkfontdir
+}
+# vim: set ts=2 sw=2;
