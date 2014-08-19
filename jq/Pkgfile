@@ -1,0 +1,15 @@
+# Description: command-line json processor
+# URL: https://stedolan.github.io/jq/
+# Maintainer: stayradiated
+# Depends on: flex bison
+
+name=jq
+version=git
+repo=$name-git
+release=1
+source=(http://stedolan.github.io/jq/download/linux64/jq)
+
+build () {
+  install -d $PKG/usr/bin
+  install -m 0755 -D jq $PKG/usr/bin
+}
