@@ -4,3 +4,5 @@
 *.xz
 *.deb
 *-git
+
+jq/jq
